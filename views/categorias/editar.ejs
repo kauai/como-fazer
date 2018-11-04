@@ -1,0 +1,13 @@
+<%- include('../header')%>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="teste" style="padding-top:40px;">
+        <form action="/categorias/editar/<%= categoria.id %>" method="POST">
+            <input class="form-control" value="<%= categoria.categoria %>" placeholder="Insira sua categoria" type="text" name="categoria">
+            <button class="btn btn-success" style="margin-top:10px;">Editar</button>
+        </form>
+     </div>
+    </div>
+</div>
+
+ <%- include('../footer')%> 

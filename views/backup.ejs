@@ -1,0 +1,11 @@
+<%- include('../header')%>
+    <ul class="list-group">
+        <% categorias.forEach(({ id, categoria }) => { %>
+                <li class="list-group-item disabled">
+                    <%= categoria %>
+                    <a class="btn btn-sm btn-primary" href="/categorias/editar/<%= id %>">Editar</a> 
+                    <a class="btn btn-sm btn-danger" href="/categorias/excluir/<%= id %>">Excluir</a>
+                </li>
+        <% }) %>
+    </ul>
+<%- include('../footer')%> 

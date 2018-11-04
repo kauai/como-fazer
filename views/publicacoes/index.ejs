@@ -1,0 +1,30 @@
+<%- include('../header')%>
+<%= console.log('PUBLICACOES', categorias)%>
+<h2>Publicaçoes</h2>
+<div class="table-responsive-sm">
+<table class="table table-hover table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Titulo</th>
+            <th scope="col">Conteudo</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+        </tr>
+      </thead>
+  <tbody>
+ <% publicacoes.forEach(({ id, categoria }) => { %>
+        <tr>
+            <td><%= categoria.titulo %></td>
+            <td><%= categoria.conteudo %></td>
+            <td><a class="btn btn-sm btn-primary" href="/publicacoes/editar/<%= categorias %>/<%= id %>">Editar</a> </td>
+            <td><a class="btn btn-sm btn-danger" href="/publicacoes/excluir/<%= categorias %>/<%= id %>">Excluir</a></td>
+        </tr>
+ <% }) %>
+</tbody>
+</table>
+</div>
+<%- include('../footer')%> 
+
+
+ 
+  

@@ -1,0 +1,15 @@
+<%- include('../header')%>
+<%= console.log('categoria',categoria)%>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="teste" style="padding-top:40px;">
+        <form action="/publicacoes/editar/<%= categoria.catId %>/<%= categoria.id %>" method="POST">
+            <input class="form-control" value="<%= categoria.data.titulo %>" placeholder="Insira seu titulo" type="text" name="titulo">
+            <input class="form-control" value="<%= categoria.data.conteudo %>" placeholder="Insira seu conteudo" type="text" name="conteudo">
+            <button class="btn btn-success" style="margin-top:10px;">Editar</button>
+        </form>
+     </div>
+    </div>
+</div>
+
+ <%- include('../footer')%> 

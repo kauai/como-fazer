@@ -1,0 +1,25 @@
+<%- include('../header')%>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="teste" style="padding-top:40px;">
+          <h2>Novas publicaçoes</h2>
+          <form class="form" action="/publicacoes/nova" method="POST">
+              <input class="form-control" placeholder="Insira o titulo" type="text" name="titulo">
+              <br>
+              <select name="categoria" class="custom-select custom-select-lg mb-3">
+                <option selected>Open this select menu</option>
+                <% categorias.forEach(item => {%>
+                      <%= console.log(item.categoria) %>
+                      <option value="<%= item.id %>"><%= item.categoria %></option>  
+               <% })%>
+              </select>
+              <br>
+              <textarea class="form-control" placeholder="Insira o conteudo" type="text" name="conteudo"></textarea>
+              <button type="submit" style="margin-top:10px;" class="btn btn-primary">Salvar</button>
+        </form>
+     </div>
+    </div>
+</div>
+
+ <%- include('../footer')%> 
