@@ -1,6 +1,7 @@
 const axios = require('axios')
 const BaseURL = 'https://como-fazer-ba8af.firebaseio.com/'
 const auth = 'lRzgYpK04akknr6TBtpavNT89fDIcBp7papJJx0x'
+//enviando para o zeit
 
 const list = async (key) => {
     const { data } = await axios.get(BaseURL + key +".json?auth="+auth)
